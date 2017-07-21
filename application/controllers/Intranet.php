@@ -16,7 +16,7 @@ class Intranet extends CI_Controller {
         $this->form_validation->set_rules("url$id", 'URL', 'valid_url|required');
         echo $url = $this->input->post("url$id");
         if ($this->form_validation->run() === FALSE) {
-            $datos['titulo'] = "Mantenimiento Banner Intranet";
+            $datos['titulo'] = "Mantenimiento Banner Intranet todo";
             $this->load->view('template/head', $datos);
             $this->load->view('webservice/intranet/listaBanner');
             $this->load->view('template/foot');
