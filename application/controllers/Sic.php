@@ -9,12 +9,10 @@ class Sic extends CI_Controller {
         $data['fin'] = $this->input->post('fin');
         $data['busqueda'] = $this->input->post('busqueda');
         $data['options']= array('TODOS','BTNDIRECCION', 'BTNLICENCIA', 'BTNCIIU');
-        $datos['titulo'] = "Reporte de Busquedas en Sistema de Información Catastral";
-        
+        $datos['titulo'] = "Reporte de Busquedas en Sistema de Información Catastral";        
         $datos['dataTable'] = $this->load->view('template/datatable', '', TRUE);
         $datos['dataPicker'] = $this->load->view('template/datapicker', '', TRUE);
-        $this->load->view('template/head', $datos);
-        
+        $this->load->view('template/head', $datos);        
         $url = "http://167.249.10.28/Servicios/SicClick.svc/json/sicclick";
         $set = file_get_contents($url);
         $data['jsonButton'] = json_decode($set);
@@ -26,8 +24,7 @@ class Sic extends CI_Controller {
         $datos['titulo'] = "Reporte de Busquedas en Sistema de Información Catastral";        
         $datos['dataTable'] = $this->load->view('template/datatable', '', TRUE);
         //$datos['dataPicker'] = $this->load->view('template/datapicker', '', TRUE);
-        $this->load->view('template/head', $datos);
-        
+        $this->load->view('template/head', $datos);        
         $url = "http://167.249.10.28/Servicios/SicClick.svc/json/sicclicknro";
         $set = file_get_contents($url);
         $data['jsonButton'] = json_decode($set);

@@ -3,6 +3,7 @@
 class Jsonmsi extends CI_Model {
 
     public function Convocatoriascas($all) {
+        
         $sql = "SELECT 
                 codigo 
                 , descripcion

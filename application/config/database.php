@@ -72,6 +72,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | the query builder class.
  */
 $active_group = 'portal_msi';
+//$DBportal = $this->load->database('portal_msi', TRUE);
+//$DBindicadores = $this->load->database('indicadores', TRUE);
 $query_builder = TRUE;
 
 
@@ -94,4 +96,25 @@ $db['portal_msi']['compress'] = FALSE;
 $db['portal_msi']['stricton'] = FALSE;
 $db['portal_msi']['failover'] = array();
 $db['portal_msi']['save_queries'] = TRUE;
+
+
+$db['indicadores']['hostname'] = "localhost";
+$db['indicadores']['port'] = "";
+$db['indicadores']['username'] = "root";
+$db['indicadores']['password'] = "";
+$db['indicadores']['database'] = "indicadores";
+$db['indicadores']['dbdriver'] = "mysqli";
+$db['indicadores']['dbprefix'] = "";
+$db['indicadores']['pconnect'] = FALSE;
+$db['indicadores']['db_debug'] = (ENVIRONMENT !== 'production');
+$db['indicadores']['cache_on'] = FALSE;
+$db['indicadores']['cachedir'] = "";
+$db['indicadores']['char_set'] = "utf8";
+$db['indicadores']['dbcollat'] = "utf8_general_ci";
+$db['indicadores']['swap_pre'] = "";
+$db['indicadores']['encrypt'] = FALSE;
+$db['indicadores']['compress'] = FALSE;
+$db['indicadores']['stricton'] = FALSE;
+$db['indicadores']['failover'] = array();
+$db['indicadores']['save_queries'] = TRUE;
 
